@@ -18,12 +18,12 @@ class _GameState extends State<Game> {
 
   @override
   Widget build(BuildContext context) {
-    return BonfireTiledWidget(
+    return BonfireWidget(
       joystick: Joystick(
         keyboardConfig: KeyboardConfig(keyboardDirectionalType: KeyboardDirectionalType.arrows),
         directional: JoystickDirectional(),
       ),
-      map: TiledWorldMap(
+      map: WorldMapByTiled(
           'tile/mapa.json',
           objectsBuilder: {
             'element': (properties) => ElementEat(properties.position),
